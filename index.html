@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nail Radiance | Best Beauty & Nail Salon in Dehradun</title>
+  <meta name="description" content="Nail Radiance – Dehradun's premier nail spa and beauty salon. Expert manicures, pedicures, nail art, nail extensions, skincare, waxing & bridal makeup. Book your appointment today!" />
+  <meta name="keywords" content="beauty salon in Dehradun, nail spa Paltan Bazaar, best manicure in Dehradun, nail art Dehradun, pedicure Dehradun, nail extensions Dehradun, skincare salon Dehradun, waxing salon Dehradun, bridal makeup Dehradun, beauty parlour Uttarakhand" />
+  <meta name="author" content="Nail Radiance" />
+  <meta property="og:title" content="Nail Radiance | Best Beauty & Nail Salon in Dehradun" />
+  <meta property="og:description" content="Luxury nail spa & beauty salon in Dehradun. Manicures, pedicures, nail art, extensions, skincare & more." />
+  <meta property="og:type" content="website" />
+  <meta name="geo.region" content="IN-UT" />
+  <meta name="geo.placename" content="Dehradun" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --rose: #C8737A;
+      --rose-light: #E8A9AD;
+      --rose-pale: #F9EEEf;
+      --gold: #C9A96E;
+      --gold-light: #F0DFB8;
+      --charcoal: #2C2420;
+      --warm-white: #FBF7F4;
+      --cream: #F4EDE6;
+      --text-muted: #8A726D;
+      --border: #E8D8D0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--warm-white);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ─── CUSTOM CURSOR ─── */
+    .cursor {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--rose);
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform 0.15s ease, opacity 0.15s;
+    }
+    .cursor-ring {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      border: 1.5px solid var(--rose);
+      position: fixed;
+      pointer-events: none;
+      z-index: 9998;
+      transition: transform 0.35s ease;
+      transform: translate(-11px, -11px);
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 0 40px;
+      height: 70px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(251,247,244,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--rose); }
+    .nav-links {
+      display: flex; gap: 36px; list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--charcoal);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--rose); }
+    .nav-cta {
+      background: var(--rose);
+      color: #fff !important;
+      padding: 9px 22px;
+      border-radius: 50px;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--charcoal) !important; color: #fff !important; }
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px; cursor: pointer;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--charcoal); border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed; top: 70px; left: 0; right: 0;
+      background: var(--warm-white);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 40px;
+      z-index: 999;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .mobile-menu a { text-decoration: none; color: var(--charcoal); font-size: 0.9rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 70px;
+      overflow: hidden;
+    }
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 60px 80px 80px;
+      position: relative;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--rose);
+      border: 1px solid var(--rose-light);
+      padding: 6px 16px; border-radius: 50px;
+      margin-bottom: 28px;
+      width: fit-content;
+      animation: fadeUp 0.7s ease 0.2s both;
+    }
+    .hero-badge::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--rose); display: inline-block;
+    }
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.2rem, 5vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.08;
+      color: var(--charcoal);
+      margin-bottom: 24px;
+      animation: fadeUp 0.7s ease 0.35s both;
+    }
+    .hero-h1 em { font-style: italic; color: var(--rose); }
+    .hero-sub {
+      font-size: 1rem; font-weight: 300; color: var(--text-muted);
+      line-height: 1.7; max-width: 380px; margin-bottom: 40px;
+      animation: fadeUp 0.7s ease 0.5s both;
+    }
+    .hero-actions {
+      display: flex; gap: 16px; align-items: center;
+      animation: fadeUp 0.7s ease 0.65s both;
+    }
+    .btn-primary {
+      background: var(--rose);
+      color: #fff;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { background: var(--charcoal); transform: translateY(-2px); }
+    .btn-secondary {
+      color: var(--charcoal);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 1.5px solid var(--rose);
+      padding-bottom: 2px;
+      transition: color 0.2s;
+    }
+    .btn-secondary:hover { color: var(--rose); }
+    .hero-stats {
+      display: flex; gap: 36px; margin-top: 56px;
+      animation: fadeUp 0.7s ease 0.8s both;
+    }
+    .stat-item {}
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem; font-weight: 600;
+      color: var(--charcoal); line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.72rem; font-weight: 400;
+      color: var(--text-muted); letter-spacing: 0.06em;
+      margin-top: 4px;
+    }
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1s ease 0.3s both;
+    }
+    .hero-right::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--rose-pale) 0%, var(--cream) 100%);
+    }
+    .hero-img-grid {
+      position: absolute; inset: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 3px;
+    }
+    .hero-img-cell {
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s;
+    }
+    .hero-img-cell:hover { transform: scale(1.04); }
+    .hero-img-cell:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80'); }
+    .hero-img-cell:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=600&q=80'); }
+    .hero-img-cell:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=600&q=80'); }
+    .hero-img-cell:nth-child(4) { background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80'); }
+    .hero-overlay-card {
+      position: absolute;
+      bottom: 40px; left: -24px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      display: flex; align-items: center; gap: 14px;
+      animation: slideRight 0.8s ease 1s both;
+      z-index: 2;
+    }
+    .card-icon {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--rose-pale);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+    }
+    .card-text strong { display: block; font-size: 0.9rem; font-weight: 600; }
+    .card-text span { font-size: 0.75rem; color: var(--text-muted); }
+
+    /* ─── ANNOUNCEMENT STRIP ─── */
+    .strip {
+      background: var(--charcoal);
+      color: #fff;
+      padding: 12px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .strip-track {
+      display: flex; gap: 60px; white-space: nowrap;
+      animation: marquee 30s linear infinite;
+    }
+    .strip-item {
+      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+      font-weight: 400; display: flex; align-items: center; gap: 16px; flex-shrink: 0;
+    }
+    .strip-item::after { content: '✦'; color: var(--gold); }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 100px 80px; }
+    .section-label {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--rose);
+      margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+    }
+    .section-label::before {
+      content: ''; width: 28px; height: 1.5px; background: var(--rose);
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--charcoal);
+    }
+    .section-title em { font-style: italic; color: var(--rose); }
+
+    /* ─── ABOUT ─── */
+    #about {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+      background: var(--cream);
+    }
+    .about-images {
+      position: relative; height: 560px;
+    }
+    .about-img-main {
+      position: absolute; left: 0; top: 0;
+      width: 72%; height: 80%;
+      border-radius: 20px; overflow: hidden;
+    }
+    .about-img-main img { width: 100%; height: 100%; object-fit: cover; }
+    .about-img-sec {
+      position: absolute; right: 0; bottom: 0;
+      width: 54%; height: 52%;
+      border-radius: 20px; overflow: hidden;
+      border: 6px solid var(--cream);
+    }
+    .about-img-sec img { width: 100%; height: 100%; object-fit: cover; }
+    .about-badge-float {
+      position: absolute; top: 32px; right: 0;
+      background: var(--rose);
+      color: #fff;
+      border-radius: 12px;
+      padding: 16px 20px;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .about-badge-float strong { display: block; font-size: 2rem; font-weight: 600; }
+    .about-badge-float span { font-size: 0.78rem; }
+    .about-text { padding-right: 20px; }
+    .about-text p {
+      color: var(--text-muted); line-height: 1.8; font-weight: 300;
+      font-size: 0.97rem; margin: 20px 0;
+    }
+    .about-features { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+    .feature-row { display: flex; gap: 14px; align-items: flex-start; }
+    .feature-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--rose);
+      flex-shrink: 0; margin-top: 6px;
+    }
+    .feature-row span { font-size: 0.9rem; font-weight: 400; color: var(--charcoal); }
+
+    /* ─── SERVICES ─── */
+    #services { background: var(--warm-white); }
+    .services-header {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      margin-bottom: 56px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--cream);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(.4,0,.2,1);
+      cursor: pointer;
+      position: relative;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(200,115,122,0.18);
+    }
+    .service-card:hover .service-img img { transform: scale(1.07); }
+    .service-img { height: 200px; overflow: hidden; }
+    .service-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .service-info { padding: 22px; }
+    .service-icon { font-size: 1.5rem; margin-bottom: 10px; }
+    .service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 500;
+      margin-bottom: 8px; color: var(--charcoal);
+    }
+    .service-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+    .service-price {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 16px; padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .price-tag {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-weight: 600; color: var(--rose);
+    }
+    .price-cta {
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--charcoal); text-decoration: none;
+      border-bottom: 1px solid var(--charcoal);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .price-cta:hover { color: var(--rose); border-color: var(--rose); }
+    .service-card.featured {
+      background: var(--charcoal);
+      grid-column: span 2;
+      display: grid; grid-template-columns: 1fr 1fr;
+    }
+    .service-card.featured .service-img { height: auto; }
+    .service-card.featured .service-name,
+    .service-card.featured .service-desc { color: #fff; }
+    .service-card.featured .service-desc { opacity: 0.7; }
+    .service-card.featured .price-tag { color: var(--gold); }
+    .service-card.featured .price-cta { color: #fff; border-color: #fff; }
+    .service-card.featured .service-price { border-color: rgba(255,255,255,0.15); }
+
+    /* ─── PRICING TABLE ─── */
+    #pricing { background: var(--cream); }
+    .pricing-tabs {
+      display: flex; gap: 8px; margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 10px 24px;
+      border-radius: 50px;
+      border: 1.5px solid var(--border);
+      background: none;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--charcoal);
+    }
+    .tab-btn.active {
+      background: var(--rose);
+      border-color: var(--rose);
+      color: #fff;
+    }
+    .tab-btn:hover:not(.active) { border-color: var(--rose); color: var(--rose); }
+    .price-panel { display: none; }
+    .price-panel.active { display: block; }
+    .price-table { width: 100%; border-collapse: collapse; }
+    .price-table tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .price-table tr:hover { background: rgba(200,115,122,0.04); }
+    .price-table td { padding: 18px 8px; }
+    .price-table td:first-child { font-weight: 400; font-size: 0.95rem; }
+    .price-table td:last-child {
+      text-align: right;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--rose);
+    }
+    .price-note { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* ─── GALLERY ─── */
+    #gallery { background: var(--charcoal); color: #fff; }
+    #gallery .section-title { color: #fff; }
+    #gallery .section-label { color: var(--rose-light); }
+    #gallery .section-label::before { background: var(--rose-light); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 240px 240px;
+      gap: 12px;
+      margin-top: 48px;
+    }
+    .gallery-item {
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item:nth-child(1) { grid-column: span 2; }
+    .gallery-item:nth-child(5) { grid-column: span 2; }
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(44,36,32,0.5), transparent);
+      opacity: 0; transition: opacity 0.3s;
+      display: flex; align-items: flex-end; padding: 20px;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay span { color: #fff; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; }
+    .gallery-insta {
+      margin-top: 40px; text-align: center;
+    }
+    .gallery-insta a {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: #fff; text-decoration: none;
+      font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      padding: 12px 28px; border-radius: 50px;
+      transition: all 0.25s;
+    }
+    .gallery-insta a:hover { background: var(--rose); border-color: var(--rose); }
+
+    /* ─── TESTIMONIALS ─── */
+    #testimonials { background: var(--warm-white); }
+    .reviews-header {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      margin-bottom: 48px;
+    }
+    .reviews-rating {
+      text-align: right;
+    }
+    .reviews-rating .big-score {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem; font-weight: 300; color: var(--charcoal);
+      line-height: 1;
+    }
+    .stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 3px; }
+    .reviews-rating p { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .review-card {
+      background: var(--cream);
+      border-radius: 20px;
+      padding: 30px;
+      position: relative;
+      transition: transform 0.3s;
+    }
+    .review-card:hover { transform: translateY(-4px); }
+    .review-card::before {
+      content: '"';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem; color: var(--rose-light);
+      position: absolute; top: 8px; left: 24px;
+      line-height: 1;
+    }
+    .review-text {
+      font-size: 0.92rem; line-height: 1.75; color: var(--text-muted);
+      margin-top: 30px; font-weight: 300;
+    }
+    .reviewer {
+      display: flex; align-items: center; gap: 12px; margin-top: 22px;
+    }
+    .reviewer-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--rose-pale);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 600; color: var(--rose);
+    }
+    .reviewer-name { font-weight: 500; font-size: 0.9rem; }
+    .reviewer-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+    .review-stars { color: var(--gold); font-size: 0.85rem; margin-top: 12px; }
+
+    /* ─── TEAM ─── */
+    #team { background: var(--cream); }
+    .team-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;
+      margin-top: 48px;
+    }
+    .team-card { text-align: center; }
+    .team-photo {
+      width: 100%; aspect-ratio: 3/4;
+      border-radius: 20px; overflow: hidden; margin-bottom: 18px;
+      position: relative;
+    }
+    .team-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .team-card:hover .team-photo img { transform: scale(1.04); }
+    .team-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 500; margin-bottom: 4px;
+    }
+    .team-role { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+
+    /* ─── BOOKING ─── */
+    #booking {
+      background: var(--rose);
+      color: #fff;
+      text-align: center;
+      padding: 100px 80px;
+    }
+    #booking .section-label { color: rgba(255,255,255,0.7); justify-content: center; }
+    #booking .section-label::before { background: rgba(255,255,255,0.7); }
+    #booking .section-title { color: #fff; text-align: center; }
+    .booking-form {
+      display: grid; grid-template-columns: repeat(4, 1fr) auto;
+      gap: 16px; margin-top: 48px;
+      background: rgba(255,255,255,0.15);
+      padding: 24px; border-radius: 20px;
+      backdrop-filter: blur(8px);
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; text-align: left; }
+    .form-group label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; }
+    .form-group select,
+    .form-group input {
+      background: rgba(255,255,255,0.2);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group select option { color: var(--charcoal); background: #fff; }
+    .form-group select:focus,
+    .form-group input:focus { border-color: #fff; }
+    .form-group input::placeholder { color: rgba(255,255,255,0.6); }
+    .form-submit-btn {
+      align-self: flex-end;
+      background: #fff;
+      color: var(--rose);
+      border: none;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s;
+      white-space: nowrap;
+    }
+    .form-submit-btn:hover { background: var(--charcoal); color: #fff; }
+    .booking-alts {
+      display: flex; justify-content: center; gap: 24px; margin-top: 28px;
+    }
+    .alt-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: #fff; text-decoration: none;
+      padding: 12px 24px; border-radius: 50px;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.06em;
+      transition: all 0.25s;
+    }
+    .alt-btn:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+    .alt-btn.whatsapp-btn { background: #25D366; border-color: #25D366; }
+    .alt-btn.whatsapp-btn:hover { background: #1da851; border-color: #1da851; }
+
+    /* ─── CONTACT ─── */
+    #contact { background: var(--warm-white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; margin-top: 48px; }
+    .contact-info { display: flex; flex-direction: column; gap: 32px; }
+    .contact-block h4 {
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--rose); margin-bottom: 10px;
+    }
+    .contact-block p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
+    .contact-block a { color: var(--charcoal); text-decoration: none; font-weight: 500; }
+    .contact-block a:hover { color: var(--rose); }
+    .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; }
+    .hours-row { display: flex; justify-content: space-between; font-size: 0.88rem; }
+    .hours-row .day { color: var(--text-muted); }
+    .hours-row .time { font-weight: 500; }
+    .map-embed {
+      border-radius: 20px; overflow: hidden;
+      height: 380px; background: var(--cream);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; color: var(--text-muted);
+    }
+    .map-embed iframe { width: 100%; height: 100%; border: none; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--charcoal);
+      color: #fff;
+      padding: 70px 80px 30px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .nav-logo { color: #fff; margin-bottom: 16px; display: block; }
+    .footer-brand p { font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 260px; }
+    .footer-socials { display: flex; gap: 12px; margin-top: 24px; }
+    .social-icon {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none; font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .social-icon:hover { background: var(--rose); border-color: var(--rose); color: #fff; }
+    .footer-col h5 {
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--rose); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+
+    /* ─── FLOATING WHATSAPP ─── */
+    .float-wa {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+      z-index: 900;
+      text-decoration: none;
+      font-size: 1.6rem;
+      transition: transform 0.25s, box-shadow 0.25s;
+      animation: pulse-wa 2s ease-in-out infinite;
+    }
+    .float-wa:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.55); }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    @keyframes slideRight {
+      from { opacity: 0; transform: translateX(-24px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @keyframes pulse-wa {
+      0%, 100% { box-shadow: 0 8px 24px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 8px 40px rgba(37,211,102,0.7); }
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1100px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-card.featured { grid-column: span 2; display: block; }
+      .service-card.featured .service-img { height: 220px; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      #hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 60px 32px; }
+      .hero-right { height: 400px; position: relative; }
+      .hero-overlay-card { left: 16px; }
+      section { padding: 70px 32px; }
+      #about { grid-template-columns: 1fr; }
+      .about-images { height: 400px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(5) { grid-column: span 1; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .booking-form { grid-template-columns: 1fr 1fr; }
+      .form-submit-btn { grid-column: span 2; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      footer { padding: 60px 32px 24px; }
+    }
+    @media (max-width: 600px) {
+      .hero-h1 { font-size: 2.8rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card.featured { grid-column: span 1; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .booking-form { grid-template-columns: 1fr; }
+      .form-submit-btn { grid-column: span 1; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-wrap: wrap; gap: 20px; }
+      .booking-alts { flex-direction: column; align-items: center; }
+      .reviews-header { flex-direction: column; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919876543210?text=Hi%2C%20I'd%20like%20to%20book%20an%20appointment%20at%20Nail%20Radiance!" class="float-wa" target="_blank" rel="noopener" title="Chat on WhatsApp">💬</a>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Nail <span>Radiance</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#booking" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#services" onclick="closeMenu()">Services</a></li>
+    <li><a href="#pricing" onclick="closeMenu()">Pricing</a></li>
+    <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+    <li><a href="#testimonials" onclick="closeMenu()">Reviews</a></li>
+    <li><a href="#team" onclick="closeMenu()">Team</a></li>
+    <li><a href="#booking" onclick="closeMenu()">Book Appointment</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+  </ul>
+</div>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-badge">Dehradun's Premier Nail & Beauty Studio</div>
+    <h1 class="hero-h1">Where Beauty<br>Meets <em>Artistry</em></h1>
+    <p class="hero-sub">Expert nail care, stunning nail art, and full beauty services crafted for the modern woman. Your glow-up starts here.</p>
+    <div class="hero-actions">
+      <a href="#booking" class="btn-primary">Book Appointment →</a>
+      <a href="#services" class="btn-secondary">Explore Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">1200+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">7+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4.9★</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-grid">
+      <div class="hero-img-cell"></div>
+      <div class="hero-img-cell"></div>
+      <div class="hero-img-cell"></div>
+      <div class="hero-img-cell"></div>
+    </div>
+    <div class="hero-overlay-card">
+      <div class="card-icon">💅</div>
+      <div class="card-text">
+        <strong>Walk-ins Welcome</strong>
+        <span>Mon–Sun · 9 AM – 8 PM</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Announcement Strip -->
+<div class="strip">
+  <div class="strip-track">
+    <span class="strip-item">Best Nail Salon in Dehradun</span>
+    <span class="strip-item">Nail Spa · Paltan Bazaar</span>
+    <span class="strip-item">Bridal Packages Available</span>
+    <span class="strip-item">International Nail Art Techniques</span>
+    <span class="strip-item">Hygienic · Sterilized Equipment</span>
+    <span class="strip-item">Best Manicure in Dehradun</span>
+    <span class="strip-item">Book via WhatsApp · Instant Confirmation</span>
+    <span class="strip-item">Best Nail Salon in Dehradun</span>
+    <span class="strip-item">Nail Spa · Paltan Bazaar</span>
+    <span class="strip-item">Bridal Packages Available</span>
+    <span class="strip-item">International Nail Art Techniques</span>
+    <span class="strip-item">Hygienic · Sterilized Equipment</span>
+    <span class="strip-item">Best Manicure in Dehradun</span>
+    <span class="strip-item">Book via WhatsApp · Instant Confirmation</span>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about">
+  <div class="about-images reveal">
+    <div class="about-img-main">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=700&q=80" alt="Nail Radiance beauty salon Dehradun interior" loading="lazy" />
+    </div>
+    <div class="about-img-sec">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=80" alt="Nail art and manicure at Nail Radiance Dehradun" loading="lazy" />
+    </div>
+    <div class="about-badge-float">
+      <strong>#1</strong>
+      <span>Nail Spa<br>in Doon</span>
+    </div>
+  </div>
+  <div class="about-text reveal">
+    <div class="section-label">About Us</div>
+    <h2 class="section-title">Crafting <em>Confidence</em><br>One Nail at a Time</h2>
+    <p>Nestled in the heart of Dehradun, Nail Radiance is more than just a salon — it's a sanctuary. Since 2017, we've been Uttarakhand's most-trusted destination for luxury nail care, beauty treatments, and transformative experiences.</p>
+    <p>From intricate hand-painted nail art to soothing spa pedicures and bridal full-glam, our certified artists bring your vision to life using only premium, cruelty-free products in a pristine, hygienic environment.</p>
+    <div class="about-features">
+      <div class="feature-row"><div class="feature-dot"></div><span>Certified & internationally-trained nail technicians</span></div>
+      <div class="feature-row"><div class="feature-dot"></div><span>OPI, CND, Orly & top-brand products only</span></div>
+      <div class="feature-row"><div class="feature-dot"></div><span>Hospital-grade sterilization protocols</span></div>
+      <div class="feature-row"><div class="feature-dot"></div><span>Relaxing, feminine, fully air-conditioned studio</span></div>
+      <div class="feature-row"><div class="feature-dot"></div><span>Bridal & group packages with advance booking</span></div>
+    </div>
+    <div style="margin-top:36px">
+      <a href="#booking" class="btn-primary">Reserve Your Spot →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <div class="services-header">
+    <div>
+      <div class="section-label">Our Services</div>
+      <h2 class="section-title">Beauty Treatments<br><em>Tailored for You</em></h2>
+    </div>
+    <a href="#pricing" class="btn-secondary">View All Pricing</a>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=80" alt="Classic & Gel Manicure Dehradun" loading="lazy" />
+      </div>
+      <div class="service-info">
+        <div class="service-icon">💅</div>
+        <div class="service-name">Manicure</div>
+        <p class="service-desc">Classic, gel, French, OPI & spa manicures. Shape, buff, cuticle care, and your perfect colour.</p>
+        <div class="service-price">
+          <span class="price-tag">From ₹299</span>
+          <a href="#booking" class="price-cta">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&q=80" alt="Luxury Pedicure Dehradun" loading="lazy" />
+      </div>
+      <div class="service-info">
+        <div class="service-icon">🦶</div>
+        <div class="service-name">Pedicure</div>
+        <p class="service-desc">Foot soak, exfoliation, callus removal, massage, and polish. Spa, gel & premium pedicure options.</p>
+        <div class="service-price">
+          <span class="price-tag">From ₹399</span>
+          <a href="#booking" class="price-cta">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card featured reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=700&q=80" alt="Custom Nail Art Dehradun" loading="lazy" />
+      </div>
+      <div class="service-info">
+        <div class="service-icon">🎨</div>
+        <div class="service-name">Nail Art & Extensions</div>
+        <p class="service-desc">Hand-painted designs, 3D art, chrome, ombre, and gel extensions. From minimalist to maximalist — any design imaginable.</p>
+        <div class="service-price">
+          <span class="price-tag">From ₹599</span>
+          <a href="#booking" class="price-cta">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&q=80" alt="Skincare Facial Dehradun" loading="lazy" />
+      </div>
+      <div class="service-info">
+        <div class="service-icon">✨</div>
+        <div class="service-name">Skincare & Facials</div>
+        <p class="service-desc">Gold facials, brightening, anti-acne, de-tan, hydrating & cleanup treatments for every skin type.</p>
+        <div class="service-price">
+          <span class="price-tag">From ₹499</span>
+          <a href="#booking" class="price-cta">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1607006483224-33e7e3e3a1e4?w=500&q=80" alt="Waxing Salon Dehradun" loading="lazy" />
+      </div>
+      <div class="service-info">
+        <div class="service-icon">🌸</div>
+        <div class="service-name">Waxing & Threading</div>
+        <p class="service-desc">Rica, chocolate, full-body, bikini, and face waxing. Gentle techniques for sensitive skin.</p>
+        <div class="service-price">
+          <span class="price-tag">From ₹199</span>
+          <a href="#booking" class="price-cta">Book</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100d7fb?w=500&q=80" alt="Bridal Makeup Dehradun" loading="lazy" />
+      </div>
+      <div class="service-info">
+        <div class="service-icon">👑</div>
+        <div class="service-name">Bridal & Party Makeup</div>
+        <p class="service-desc">HD, airbrush & traditional bridal makeup. Reception, engagement & party looks by expert artists.</p>
+        <div class="service-price">
+          <span class="price-tag">From ₹2,999</span>
+          <a href="#booking" class="price-cta">Book</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing">
+  <div class="section-label">Pricing</div>
+  <h2 class="section-title">Transparent <em>Pricing</em></h2>
+  <div class="pricing-tabs" style="margin-top:32px">
+    <button class="tab-btn active" onclick="showTab('manicure')">Manicure</button>
+    <button class="tab-btn" onclick="showTab('pedicure')">Pedicure</button>
+    <button class="tab-btn" onclick="showTab('nailart')">Nail Art</button>
+    <button class="tab-btn" onclick="showTab('extensions')">Extensions</button>
+    <button class="tab-btn" onclick="showTab('skincare')">Skincare</button>
+    <button class="tab-btn" onclick="showTab('waxing')">Waxing</button>
+    <button class="tab-btn" onclick="showTab('makeup')">Makeup</button>
+  </div>
+
+  <div class="price-panel active" id="tab-manicure">
+    <table class="price-table">
+      <tr><td>Basic Manicure</td><td class="price-note">Shaping + cuticle care + colour</td><td>₹299</td></tr>
+      <tr><td>French Manicure</td><td class="price-note">Classic white tips + base coat</td><td>₹399</td></tr>
+      <tr><td>Gel Manicure</td><td class="price-note">Long-lasting gel polish, 2–3 weeks</td><td>₹599</td></tr>
+      <tr><td>OPI Manicure</td><td class="price-note">Premium OPI colour collection</td><td>₹499</td></tr>
+      <tr><td>Spa Manicure</td><td class="price-note">Scrub + mask + warm paraffin wax</td><td>₹799</td></tr>
+      <tr><td>Deluxe Manicure</td><td class="price-note">Everything + 20-min hand massage</td><td>₹999</td></tr>
+    </table>
+  </div>
+  <div class="price-panel" id="tab-pedicure">
+    <table class="price-table">
+      <tr><td>Basic Pedicure</td><td class="price-note">Soak + shape + cuticle + colour</td><td>₹399</td></tr>
+      <tr><td>Gel Pedicure</td><td class="price-note">Gel polish + foot massage</td><td>₹699</td></tr>
+      <tr><td>Spa Pedicure</td><td class="price-note">Scrub + mask + callus removal</td><td>₹899</td></tr>
+      <tr><td>Luxury Pedicure</td><td class="price-note">Full treatment + paraffin + 30-min massage</td><td>₹1,299</td></tr>
+      <tr><td>Fish Pedicure</td><td class="price-note">Natural exfoliation therapy</td><td>₹599</td></tr>
+    </table>
+  </div>
+  <div class="price-panel" id="tab-nailart">
+    <table class="price-table">
+      <tr><td>Nail Art (per nail)</td><td class="price-note">Hand-painted design on single nail</td><td>₹50–₹150</td></tr>
+      <tr><td>Full Set Nail Art</td><td class="price-note">Custom design across all nails</td><td>₹599–₹1,499</td></tr>
+      <tr><td>Chrome / Mirror Nails</td><td class="price-note">Metallic powder pigment finish</td><td>₹799</td></tr>
+      <tr><td>Ombre / Gradient Nails</td><td class="price-note">Smooth two-tone or multi-colour</td><td>₹699</td></tr>
+      <tr><td>3D Nail Art</td><td class="price-note">Floral, gems, sculpted details</td><td>₹1,199+</td></tr>
+      <tr><td>Bridal Nail Art</td><td class="price-note">Full set custom bridal design</td><td>₹1,999+</td></tr>
+    </table>
+  </div>
+  <div class="price-panel" id="tab-extensions">
+    <table class="price-table">
+      <tr><td>Acrylic Extensions</td><td class="price-note">Full set with basic colour</td><td>₹1,499</td></tr>
+      <tr><td>Gel Extensions (Hard Gel)</td><td class="price-note">Strong, natural-looking extensions</td><td>₹1,799</td></tr>
+      <tr><td>Polygel Extensions</td><td class="price-note">Lightweight, flexible & durable</td><td>₹1,999</td></tr>
+      <tr><td>Refill / Infill</td><td class="price-note">Extension maintenance (2–3 weeks)</td><td>₹799</td></tr>
+      <tr><td>Extension Removal</td><td class="price-note">Safe removal with care</td><td>₹299</td></tr>
+    </table>
+  </div>
+  <div class="price-panel" id="tab-skincare">
+    <table class="price-table">
+      <tr><td>Basic Cleanup</td><td class="price-note">Steam + scrub + mask + toner</td><td>₹499</td></tr>
+      <tr><td>Gold Facial</td><td class="price-note">Anti-aging + brightening</td><td>₹999</td></tr>
+      <tr><td>D-Tan Facial</td><td class="price-note">Remove tan & even skin tone</td><td>₹699</td></tr>
+      <tr><td>Anti-Acne Facial</td><td class="price-note">Deep pore cleanse + blemish control</td><td>₹799</td></tr>
+      <tr><td>Hydrating Facial</td><td class="price-note">Moisture boost for dry skin</td><td>₹849</td></tr>
+      <tr><td>Bleach + Cleanup Combo</td><td class="price-note">Full face brightening combo</td><td>₹599</td></tr>
+    </table>
+  </div>
+  <div class="price-panel" id="tab-waxing">
+    <table class="price-table">
+      <tr><td>Face Waxing</td><td class="price-note">Upper lip, chin, or full face</td><td>₹199</td></tr>
+      <tr><td>Arms Waxing (full)</td><td class="price-note">Rica or chocolate wax</td><td>₹299</td></tr>
+      <tr><td>Legs Waxing (full)</td><td class="price-note">Rica or chocolate wax</td><td>₹499</td></tr>
+      <tr><td>Half-Leg Waxing</td><td class="price-note">Below knee</td><td>₹299</td></tr>
+      <tr><td>Full-Body Waxing</td><td class="price-note">Arms + legs + back + underarms</td><td>₹1,499</td></tr>
+      <tr><td>Underarms Waxing</td><td class="price-note">Quick & gentle</td><td>₹149</td></tr>
+    </table>
+  </div>
+  <div class="price-panel" id="tab-makeup">
+    <table class="price-table">
+      <tr><td>Party / Evening Makeup</td><td class="price-note">HD or airbrush finish</td><td>₹999</td></tr>
+      <tr><td>Engagement Makeup</td><td class="price-note">Full glam with lashes</td><td>₹1,999</td></tr>
+      <tr><td>Bridal Makeup (HD)</td><td class="price-note">Complete bridal transformation</td><td>₹4,999</td></tr>
+      <tr><td>Bridal Makeup (Airbrush)</td><td class="price-note">Long-lasting airbrush foundation</td><td>₹6,999</td></tr>
+      <tr><td>Hair Styling</td><td class="price-note">Blowout, curls, updo, bun</td><td>₹499–₹1,499</td></tr>
+      <tr><td>Bridal Package (Full)</td><td class="price-note">Makeup + hair + nails + facial</td><td>₹9,999</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery">
+  <div class="section-label">Our Work</div>
+  <h2 class="section-title">Gallery of <em>Creations</em></h2>
+  <div class="gallery-grid">
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=700&q=80" alt="Nail Art Dehradun – Floral design" loading="lazy" />
+      <div class="gallery-overlay"><span>Floral Nail Art</span></div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=500&q=80" alt="Gel Nails Dehradun" loading="lazy" />
+      <div class="gallery-overlay"><span>Chrome Gel Nails</span></div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&q=80" alt="Luxury Pedicure Nail Radiance" loading="lazy" />
+      <div class="gallery-overlay"><span>Spa Pedicure</span></div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&q=80" alt="Skincare Facial Dehradun" loading="lazy" />
+      <div class="gallery-overlay"><span>Glow Facial</span></div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100d7fb?w=700&q=80" alt="Bridal Makeup Dehradun" loading="lazy" />
+      <div class="gallery-overlay"><span>Bridal Glam</span></div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&q=80" alt="Nail Radiance Salon" loading="lazy" />
+      <div class="gallery-overlay"><span>Salon Ambiance</span></div>
+    </div>
+  </div>
+  <div class="gallery-insta">
+    <a href="https://instagram.com/nailradiance.ddn" target="_blank" rel="noopener">
+      📸 Follow @NailRadiance.DDN on Instagram
+    </a>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials">
+  <div class="reviews-header">
+    <div>
+      <div class="section-label">Client Love</div>
+      <h2 class="section-title">What Our Clients<br><em>Are Saying</em></h2>
+    </div>
+    <div class="reviews-rating">
+      <div class="big-score">4.9</div>
+      <div class="stars">★★★★★</div>
+      <p>Based on 380+ Google Reviews</p>
+    </div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <p class="review-text">Nail Radiance is hands-down the best nail salon in Dehradun! The nail art is stunning and lasts for weeks. The staff is so professional and the ambiance is so relaxing — I felt like royalty!</p>
+      <div class="review-stars">★★★★★</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">P</div>
+        <div>
+          <div class="reviewer-name">Priya Negi</div>
+          <div class="reviewer-sub">Dehradun · Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <p class="review-text">Got my bridal makeup and full nail set done here. Absolutely exceeded expectations! They understood exactly what I wanted. Will recommend to every bride in Uttarakhand.</p>
+      <div class="review-stars">★★★★★</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">A</div>
+        <div>
+          <div class="reviewer-name">Anjali Rawat</div>
+          <div class="reviewer-sub">Mussoorie · Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <p class="review-text">Finally found a salon near Paltan Bazaar that does nail extensions properly! My gel extensions lasted a full month. Hygienic, quick, and very reasonably priced. 10/10!</p>
+      <div class="review-stars">★★★★★</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">S</div>
+        <div>
+          <div class="reviewer-name">Simran Chhabra</div>
+          <div class="reviewer-sub">Dehradun · Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <p class="review-text">I've been coming to Nail Radiance for 2 years — best spa pedicure in Dehradun by far. Soothing ambiance and the therapists are genuinely skilled. My go-to every month!</p>
+      <div class="review-stars">★★★★★</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">M</div>
+        <div>
+          <div class="reviewer-name">Meena Thapa</div>
+          <div class="reviewer-sub">Rajpur Road · Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <p class="review-text">The ombre nail art they created for my anniversary was jaw-dropping. Literally everyone asked me where I got it done. Nail Radiance never disappoints — creative, precise, perfect!</p>
+      <div class="review-stars">★★★★★</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">R</div>
+        <div>
+          <div class="reviewer-name">Ritika Sharma</div>
+          <div class="reviewer-sub">ISBT Dehradun · Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <p class="review-text">Best waxing experience! Used Rica wax and it was completely painless. Staff is gentle, the place is spotlessly clean, and prices are very fair. Highly recommend to all Doon girls!</p>
+      <div class="review-stars">★★★★★</div>
+      <div class="reviewer">
+        <div class="reviewer-avatar">K</div>
+        <div>
+          <div class="reviewer-name">Kavya Bisht</div>
+          <div class="reviewer-sub">Clement Town · Google Review</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section id="team">
+  <div class="section-label">Our Experts</div>
+  <h2 class="section-title">Meet the <em>Artists</em></h2>
+  <div class="team-grid">
+    <div class="team-card reveal">
+      <div class="team-photo">
+        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80" alt="Neha – Lead Nail Artist Dehradun" loading="lazy" />
+      </div>
+      <div class="team-name">Neha Sharma</div>
+      <div class="team-role">Lead Nail Artist & Founder</div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-photo">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80" alt="Pooja – Skincare Expert" loading="lazy" />
+      </div>
+      <div class="team-name">Pooja Rawat</div>
+      <div class="team-role">Senior Aesthetician</div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-photo">
+        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=400&q=80" alt="Riya – Bridal Makeup Artist" loading="lazy" />
+      </div>
+      <div class="team-name">Riya Kapoor</div>
+      <div class="team-role">Bridal Makeup Artist</div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-photo">
+        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=400&q=80" alt="Sonal – Nail Technician" loading="lazy" />
+      </div>
+      <div class="team-name">Sonal Bisht</div>
+      <div class="team-role">Nail Technician & Nail Artist</div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking -->
+<section id="booking">
+  <div class="section-label">Appointments</div>
+  <h2 class="section-title">Book Your <em>Experience</em></h2>
+  <p style="margin-top:16px; opacity:0.85; font-size:0.95rem;">Reserve your slot online. Instant WhatsApp confirmation within 15 minutes.</p>
+  <form class="booking-form" onsubmit="handleBooking(event)">
+    <div class="form-group">
+      <label>Service</label>
+      <select>
+        <option value="">Select Service</option>
+        <option>Manicure</option>
+        <option>Pedicure</option>
+        <option>Nail Art</option>
+        <option>Nail Extensions</option>
+        <option>Facial / Skincare</option>
+        <option>Waxing</option>
+        <option>Makeup</option>
+        <option>Bridal Package</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" id="booking-date" />
+    </div>
+    <div class="form-group">
+      <label>Time</label>
+      <select>
+        <option>9:00 AM</option>
+        <option>10:00 AM</option>
+        <option>11:00 AM</option>
+        <option>12:00 PM</option>
+        <option>1:00 PM</option>
+        <option>2:00 PM</option>
+        <option>3:00 PM</option>
+        <option>4:00 PM</option>
+        <option>5:00 PM</option>
+        <option>6:00 PM</option>
+        <option>7:00 PM</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Your Name</label>
+      <input type="text" placeholder="Enter your name" />
+    </div>
+    <button type="submit" class="form-submit-btn">Confirm Booking →</button>
+  </form>
+  <div class="booking-alts">
+    <a href="https://wa.me/919876543210?text=Hi%2C%20I'd%20like%20to%20book%20an%20appointment%20at%20Nail%20Radiance!" target="_blank" class="alt-btn whatsapp-btn" rel="noopener">
+      💬 Book via WhatsApp
+    </a>
+    <a href="tel:+919876543210" class="alt-btn">
+      📞 Call to Book
+    </a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="section-label">Find Us</div>
+  <h2 class="section-title">Visit <em>Nail Radiance</em></h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-block">
+        <h4>Address</h4>
+        <p>Shop No. 12, Second Floor<br>Near Paltan Bazaar Chowk<br>Dehradun, Uttarakhand – 248001</p>
+      </div>
+      <div class="contact-block">
+        <h4>Phone & WhatsApp</h4>
+        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p><a href="https://wa.me/919876543210">WhatsApp Us</a></p>
+      </div>
+      <div class="contact-block">
+        <h4>Email</h4>
+        <p><a href="mailto:hello@nailradiance.in">hello@nailradiance.in</a></p>
+      </div>
+      <div class="contact-block">
+        <h4>Working Hours</h4>
+        <div class="hours-grid">
+          <div class="hours-row"><span class="day">Mon – Fri</span><span class="time">9:00 AM – 8:00 PM</span></div>
+          <div class="hours-row"><span class="day">Saturday</span><span class="time">9:00 AM – 8:00 PM</span></div>
+          <div class="hours-row"><span class="day">Sunday</span><span class="time">10:00 AM – 6:00 PM</span></div>
+        </div>
+      </div>
+      <div class="contact-block">
+        <h4>Follow Us</h4>
+        <div style="display:flex; gap:12px; margin-top:8px">
+          <a href="https://instagram.com/nailradiance.ddn" target="_blank" rel="noopener" style="color:var(--rose); font-weight:500; text-decoration:none; font-size:0.9rem;">📸 Instagram</a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener" style="color:#25D366; font-weight:500; text-decoration:none; font-size:0.9rem;">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.236!2d78.0322!3d30.3165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c356c888af%3A0x4c3562c032518799!2sPaltan%20Bazaar%2C%20Dehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1234567890"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Nail Radiance Beauty Salon Location – Paltan Bazaar, Dehradun"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#hero" class="nav-logo">Nail <span style="color:var(--rose)">Radiance</span></a>
+      <p>Dehradun's most-loved nail spa and beauty salon. Crafting confidence, one appointment at a time.</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com" class="social-icon" target="_blank" rel="noopener" title="Instagram">📸</a>
+        <a href="https://wa.me/919876543210" class="social-icon" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+        <a href="https://facebook.com" class="social-icon" target="_blank" rel="noopener" title="Facebook">📘</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#services">Manicure</a></li>
+        <li><a href="#services">Pedicure</a></li>
+        <li><a href="#services">Nail Art</a></li>
+        <li><a href="#services">Nail Extensions</a></li>
+        <li><a href="#services">Skincare</a></li>
+        <li><a href="#services">Waxing</a></li>
+        <li><a href="#services">Makeup</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#booking">Book Now</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><a href="mailto:hello@nailradiance.in">hello@nailradiance.in</a></li>
+        <li><a href="#contact">Paltan Bazaar, Dehradun</a></li>
+        <li style="color:rgba(255,255,255,0.4); font-size:0.82rem; padding-top:4px;">Mon–Sat: 9AM–8PM<br>Sun: 10AM–6PM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Nail Radiance · Beauty Salon Dehradun · All Rights Reserved</p>
+    <p>Best Nail Spa · Paltan Bazaar · Uttarakhand</p>
+  </div>
+</footer>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx - 5 + 'px';
+    cursor.style.top = my - 5 + 'px';
+  });
+  setInterval(() => {
+    const rx = parseFloat(ring.style.left || 0) + 11;
+    const ry = parseFloat(ring.style.top || 0) + 11;
+    ring.style.left = rx + (mx - rx) * 0.15 - 16 + 'px';
+    ring.style.top = ry + (my - ry) * 0.15 - 16 + 'px';
+  }, 16);
+
+  // Nav scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.style.boxShadow = window.scrollY > 20 ? '0 4px 24px rgba(0,0,0,0.08)' : 'none';
+  });
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // Pricing tabs
+  function showTab(name) {
+    document.querySelectorAll('.price-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Set min date for booking
+  const dateInput = document.getElementById('booking-date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+    dateInput.value = today;
+  }
+
+  // Booking form
+  function handleBooking(e) {
+    e.preventDefault();
+    const form = e.target;
+    const service = form.querySelector('select').value;
+    const date = form.querySelectorAll('select')[1].value || document.getElementById('booking-date').value;
+    const name = form.querySelector('input[type="text"]').value;
+    if (!service) { alert('Please select a service.'); return; }
+    if (!name) { alert('Please enter your name.'); return; }
+    const msg = encodeURIComponent(`Hi Nail Radiance! I'd like to book an appointment.\n\nName: ${name}\nService: ${service}\nDate: ${date}\n\nPlease confirm my slot. Thank you!`);
+    window.open(`https://wa.me/919876543210?text=${msg}`, '_blank');
+  }
+</script>
+
+<!-- Local Business Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Nail Radiance",
+  "description": "Premier nail spa and beauty salon in Dehradun offering manicures, pedicures, nail art, nail extensions, skincare facials, waxing, and bridal makeup services.",
+  "url": "https://www.nailradiance.in",
+  "telephone": "+91-9876543210",
+  "email": "hello@nailradiance.in",
+  "image": "https://www.nailradiance.in/logo.jpg",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop No. 12, Second Floor, Near Paltan Bazaar Chowk",
+    "addressLocality": "Dehradun",
+    "addressRegion": "Uttarakhand",
+    "postalCode": "248001",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 30.3165,
+    "longitude": 78.0322
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday"],
+      "opens": "10:00",
+      "closes": "18:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "380"
+  },
+  "sameAs": [
+    "https://instagram.com/nailradiance.ddn",
+    "https://wa.me/919876543210"
+  ]
+}
+</script>
+</body>
+</html>
